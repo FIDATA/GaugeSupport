@@ -1,0 +1,30 @@
+{
+    "name": "fidata/gauge-support",
+    "description": "Voting for tickets (for Mantis 2.x)",
+    "type": "mantisbt-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Charly Kiendl (EvilRenegade)",
+            "email": "renegade@renegadeprojects.com"
+        },
+        {
+            "name": "Cas Nuy",
+            "email": "cas@nuy.info"
+        },
+        {
+            "name": "Damien Regad",
+            "email": "dregad@mantisbt.org"
+        }
+    ],
+    "archive": {
+        "exclude": [
+            ".gitignore",
+            ".gitattributes",
+            "/doc",
+            "CHANGELOG.md",
+            "LICENSE.md",
+            "README.md"
+        ]
+    }
+}

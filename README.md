@@ -86,3 +86,11 @@ written by Charly Kiendl (EvilRenegade) back in 2010.
 It was updated to work on MantisBT 2.x by Cas Nuy in 2017.
 
 Damien Regad gave it a complete overhaul in 2019.
+
+## Creating Composer package
+
+```
+mkdir build
+composer archive --format=zip --dir=build --file=GaugeSupport
+curl -u%ARTIFACTORY_USERNAME%:%ARTIFACTORY_PASSWORD% "https://fidata.jfrog.io/fidata/composer-local/fidata/GaugeSupport.zip;composer.version=2.5.0-dev" -T build/GaugeSupport.zip
+```
