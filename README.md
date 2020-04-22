@@ -91,6 +91,6 @@ Damien Regad gave it a complete overhaul in 2019.
 
 ```
 mkdir build
-composer archive --format=zip --dir=build --file=GaugeSupport-2.5.1
-curl -u%ARTIFACTORY_USERNAME%:%ARTIFACTORY_PASSWORD% "https://fidata.jfrog.io/fidata/composer-local/fidata/GaugeSupport.zip;composer.version=2.5.1" -T build/GaugeSupport-2.5.1.zip
+composer archive --format=zip --dir=build --file=GaugeSupport-2.5.2
+curl -u%ARTIFACTORY_USERNAME%:%ARTIFACTORY_PASSWORD% "https://fidata.jfrog.io/fidata/composer-local/fidata/GaugeSupport-2.5.2.zip;composer.version=2.5.2" -T build/GaugesSupport-2.5.2.zip
 ```
