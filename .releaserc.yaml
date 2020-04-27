@@ -1,0 +1,17 @@
+branches:
+  - master
+  - name: develop
+    prerelease: ''
+    channel: false
+  - name: feature/*
+    # Compatible with https://github.com/amkay/gradle-gitflow
+    prerelease: "feature.${name.replace(/^feature\\//, '').replace(/[^0-9A-Za-z-]/g, '-')}}"
+    channel: false
+  - name: hotfix/*
+    # Compatible with https://github.com/amkay/gradle-gitflow
+    prerelease: "fix.${name.replace(/^hotfix\\//, '').replace(/[^0-9A-Za-z-]/g, '-')}"
+    channel: false
+plugins:
+  - - @semantic-release/exec
+    - prepareCmd: '"mkdir" -p build && composer archive --format=zip --dir=build --file=GaugeSupport'
+      publishCmd: 'curl -u${ process.env.ARTIFACTORY_USERNAME_PASSWORD } "${ process.env.ARTIFACTORY_URL }/composer-local/fidata/GaugeSupport-${ nextRelease.version }.zip;composer.version=${ nextRelease.version }" -T build/GaugeSupport.zip --fail --show-error'
