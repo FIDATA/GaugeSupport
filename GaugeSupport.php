@@ -26,7 +26,7 @@ class GaugeSupportPlugin extends MantisPlugin {
 		$this->name = plugin_lang_get( 'title' );
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = 'config';
-		$this->version = '2.5.0-dev';
+		$this->version = \PackageVersions\Versions::getVersion('fidata/gauge-support');;
 		$this->requires = array(
 			'MantisCore' => '2.0.0',
 			);

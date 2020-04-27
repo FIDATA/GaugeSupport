@@ -25,7 +25,11 @@
             "/doc",
             "CHANGELOG.md",
             "LICENSE.md",
-            "README.md"
+            "README.md",
+            ".releaserc.yaml"
         ]
+    },
+    "require": {
+        "ocramius/package-versions": "^1.5"
     }
 }
