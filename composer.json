@@ -17,6 +17,11 @@
             "email": "dregad@mantisbt.org"
         }
     ],
+    "readme": "README.md",
+    "config": {
+        "archive-format": "zip",
+        "archive-dir": "./build/fidata/gauge-support"
+    },
     "archive": {
         "exclude": [
             "/.project",

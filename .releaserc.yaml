@@ -13,6 +13,5 @@ branches:
     channel: false
 plugins:
   - - @semantic-release/commit-analyzer
-  - - @semantic-release/exec
-    - prepareCmd: '"mkdir" -p build && composer archive --format=zip --dir=build --file=GaugeSupport'
-      publishCmd: 'curl -u${ process.env.ARTIFACTORY_CREDENTIALS } "${ process.env.ARTIFACTORY_URL }/composer-local/fidata/GaugeSupport-${ nextRelease.version }.zip;composer.version=${ nextRelease.version }" -T build/GaugeSupport.zip --fail --show-error'
+  - - @fidata/semantic-release-composer-artifactory-plugin
+    - repo: composer-local
